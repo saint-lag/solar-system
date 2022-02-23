@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
 import Title from './Title';
 import PlanetCard from './PlanetCard';
@@ -11,9 +10,10 @@ class SolarSystem extends React.Component {
         <Title headline="Planetas" />
         <ul>
           <li>
-            {planets.map((planet) => (<PlanetCard
+            {planets.map((planet, index) => (<PlanetCard
               planetImage={ planet.image }
               planetName={ planet.name }
+              key={ index }
             />))}
           </li>
         </ul>
